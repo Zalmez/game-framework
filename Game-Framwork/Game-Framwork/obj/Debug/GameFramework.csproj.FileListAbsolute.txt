@@ -1,0 +1,8 @@
+D:\[Repos]\game-framework\Game-Framwork\Game-Framwork\bin\Debug\GameFramework.exe.config
+D:\[Repos]\game-framework\Game-Framwork\Game-Framwork\bin\Debug\GameFramework.exe
+D:\[Repos]\game-framework\Game-Framwork\Game-Framwork\bin\Debug\GameFramework.pdb
+D:\[Repos]\game-framework\Game-Framwork\Game-Framwork\bin\Debug\OpenTK.dll
+D:\[Repos]\game-framework\Game-Framwork\Game-Framwork\bin\Debug\OpenTK.xml
+D:\[Repos]\game-framework\Game-Framwork\Game-Framwork\obj\Debug\GameFramework.csprojResolveAssemblyReference.cache
+D:\[Repos]\game-framework\Game-Framwork\Game-Framwork\obj\Debug\GameFramework.exe
+D:\[Repos]\game-framework\Game-Framwork\Game-Framwork\obj\Debug\GameFramework.pdb

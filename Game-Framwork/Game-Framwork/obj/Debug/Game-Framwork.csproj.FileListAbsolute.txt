@@ -1,0 +1,3 @@
+D:\[Repos]\game-framework\Game-Framwork\Game-Framwork\bin\Debug\Game-Framwork.exe.config
+D:\[Repos]\game-framework\Game-Framwork\Game-Framwork\bin\Debug\GameFramwork.exe.config
+D:\[Repos]\game-framework\Game-Framwork\Game-Framwork\bin\Debug\GameFramework.exe.config
