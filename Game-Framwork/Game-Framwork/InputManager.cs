@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OpenTK.Input;
+using OpenTK;
 
 namespace GameFramework
 {
@@ -18,8 +19,9 @@ namespace GameFramework
         private static List<MouseButton> currentMousebuttons = new List<MouseButton>();
         private static List<MouseButton> downMousebuttons = new List<MouseButton>();
         private static List<MouseButton> upMousebuttons = new List<MouseButton>();
-
-        public static bool Focused { get; set; }
+        
+        //Not needed anymore
+        //public static bool Focused { get; set; }
 
         internal static void Update()
         {
@@ -47,23 +49,21 @@ namespace GameFramework
                 currentKeys.Add((Key)i);
             }
 
-            upMousebuttons.Clear();
-
-
             //mouse buttons
+            upMousebuttons.Clear();
             for (int i = 0; i < Enum.GetNames(typeof(MouseButton)).Length; i++)
             {
-                if (GetMouseButton((MouseButton)i) && !currentMousebuttons.Contains((MouseButton)i))
+                if (!GetMouseButton((MouseButton)i) && currentMousebuttons.Contains((MouseButton)i))
                 {
                     upMousebuttons.Add((MouseButton)i);
                 }
             }
-
+            downMousebuttons.Clear();
             for (int i = 0; i < Enum.GetNames(typeof(Key)).Length; i++)
             {
-                if(!GetMouseButton((MouseButton)i) && currentMousebuttons.Contains((MouseButton)i))
+                if(GetMouseButton((MouseButton)i) && !currentMousebuttons.Contains((MouseButton)i))
                 {
-                    upMousebuttons.Add((MouseButton)i);
+                    downMousebuttons.Add((MouseButton)i);
                 }
             }
 
@@ -78,7 +78,7 @@ namespace GameFramework
 
         public static bool GetKey(Key keyCode)
         {
-            if (!Focused)
+            if (!Game.Instance.Focused)
             {
                 return false;
             }
@@ -88,7 +88,7 @@ namespace GameFramework
 
         public static bool GetKeyDown(Key key)
         {
-            if (!Focused)
+            if (!Game.Instance.Focused)
             {
                 return false;
             }
@@ -97,7 +97,7 @@ namespace GameFramework
 
         public static bool GetKeyUp(Key key)
         {
-            if (!Focused)
+            if (!Game.Instance.Focused)
             {
                 return false;
             }
@@ -113,11 +113,11 @@ namespace GameFramework
         /// <returns></returns>
         public static bool GetMouseButton(MouseButton mouseButton)
         {
-            if (!Focused)
+            if (!Game.Instance.Focused)
             {
                 return false;
             }
-
+            Console.WriteLine(Mouse.GetState().IsButtonDown(mouseButton));
             return Mouse.GetState().IsButtonDown(mouseButton);
         }
         /// <summary>
@@ -127,7 +127,7 @@ namespace GameFramework
         /// <returns></returns>
         public static bool GetMouseButtonDown(MouseButton mouseButton)
         {
-            if (!Focused)
+            if (!Game.Instance.Focused)
             {
                 return false;
             }
@@ -140,14 +140,34 @@ namespace GameFramework
         /// <returns></returns>
         public static bool GetMouseButtonUp(MouseButton mouseButton)
         {
-            if (!Focused)
+            if (!Game.Instance.Focused)
             {
                 return false;
             }
             return upMousebuttons.Contains(mouseButton);
         }
 
+        public static Vector2 GetMousePostition()
+        {
+            //Return our mouse position in the from of a vector 2
+            return new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
 
+        }
+
+        public static void SetMousePosition(Vector2 position)
+        {
+            Mouse.SetPosition(position.X, position.Y);
+        }
+
+        public static void SetMousePosition(float x, float y)
+        {
+            Mouse.SetPosition(x, y);
+        }
+
+        public static void ShowCursor(bool visibility)
+        {
+            Game.Instance.CursorVisible = visibility;
+        }
 
     }
 }
