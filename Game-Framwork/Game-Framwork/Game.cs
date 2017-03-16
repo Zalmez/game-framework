@@ -23,6 +23,7 @@ namespace GameFramework
 
         protected override void OnUpdateFrame(FrameEventArgs e)
         {
+            InputManager.Focused = Focused;
             InputManager.Update();
             Update();
         }
@@ -38,10 +39,7 @@ namespace GameFramework
             Dispose();
         }
 
-        protected override void OnFocusedChanged(EventArgs e)
-        {
-            InputManager.focused = Focused;
-        }
+
 
         // Virtual methods
         protected virtual void Initialize() {}
