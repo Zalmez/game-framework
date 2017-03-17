@@ -11,8 +11,20 @@ namespace GameFramework
 {
     public abstract class Game : GameWindow
     {
+        private static Game instance;
+        public static Game Instance
+        {
+            get { return instance;}
+        }
+
         public Game(int width, int height, string title) : base(width, height, GraphicsMode.Default, title)
         {
+            if(instance != null)
+            {
+                Console.WriteLine("You should only have more than one game class");
+            }
+            instance = this;
+
             Run();
         }
 
@@ -38,10 +50,7 @@ namespace GameFramework
             Dispose();
         }
 
-        protected override void OnFocusedChanged(EventArgs e)
-        {
-            InputManager.focused = Focused;
-        }
+
 
         // Virtual methods
         protected virtual void Initialize() {}

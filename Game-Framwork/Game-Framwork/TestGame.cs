@@ -17,21 +17,20 @@ namespace GameFramework
 
         protected override void Update()
         {
-            if (InputManager.GetKeyDown(OpenTK.Input.Key.A))
+            if (InputManager.GetMouseButtonDown(OpenTK.Input.MouseButton.Right))
             {
-                Console.WriteLine("The 'a' key has been pressed! ");
+                Console.WriteLine("'MB1' has been pressed");
             }
 
-            if (InputManager.GetKeyUp(OpenTK.Input.Key.A))
+            if (InputManager.GetMouseButtonUp(OpenTK.Input.MouseButton.Right))
             {
-                Console.WriteLine("The 'a' key has been released");
+                Console.WriteLine("'MB1' has been released");
             }
 
-            if (InputManager.GetKey(OpenTK.Input.Key.A))
+            if (InputManager.GetMouseButton(OpenTK.Input.MouseButton.Right))
             {
-                Console.WriteLine("The 'a' key has been pressed");
+                return;
             }
-
         }
 
         protected override void Render()
