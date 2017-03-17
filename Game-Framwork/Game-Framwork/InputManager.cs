@@ -117,7 +117,6 @@ namespace GameFramework
             {
                 return false;
             }
-            Console.WriteLine(Mouse.GetState().IsButtonDown(mouseButton));
             return Mouse.GetState().IsButtonDown(mouseButton);
         }
         /// <summary>
