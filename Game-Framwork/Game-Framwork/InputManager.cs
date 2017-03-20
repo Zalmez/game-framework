@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using OpenTK.Input;
 using OpenTK;
 
@@ -59,10 +56,11 @@ namespace GameFramework
                 }
             }
             downMousebuttons.Clear();
-            for (int i = 0; i < Enum.GetNames(typeof(Key)).Length; i++)
+            for (int i = 0; i < Enum.GetNames(typeof(MouseButton)).Length; i++)
             {
                 if(GetMouseButton((MouseButton)i) && !currentMousebuttons.Contains((MouseButton)i))
                 {
+                    //Console.WriteLine(i);
                     downMousebuttons.Add((MouseButton)i);
                 }
             }
@@ -117,6 +115,7 @@ namespace GameFramework
             {
                 return false;
             }
+            //return true;
             return Mouse.GetState().IsButtonDown(mouseButton);
         }
         /// <summary>
