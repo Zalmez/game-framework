@@ -6,3 +6,11 @@ D:\[Repos]\game-framework\Game-Framwork\Game-Framwork\bin\Debug\OpenTK.xml
 D:\[Repos]\game-framework\Game-Framwork\Game-Framwork\obj\Debug\GameFramework.csprojResolveAssemblyReference.cache
 D:\[Repos]\game-framework\Game-Framwork\Game-Framwork\obj\Debug\GameFramework.exe
 D:\[Repos]\game-framework\Game-Framwork\Game-Framwork\obj\Debug\GameFramework.pdb
+M:\pc\Dokumenter\GitHub\game-framework\Game-Framwork\Game-Framwork\bin\Debug\GameFramework.exe.config
+M:\pc\Dokumenter\GitHub\game-framework\Game-Framwork\Game-Framwork\obj\Debug\GameFramework.csprojResolveAssemblyReference.cache
+M:\pc\Dokumenter\GitHub\game-framework\Game-Framwork\Game-Framwork\bin\Debug\GameFramework.exe
+M:\pc\Dokumenter\GitHub\game-framework\Game-Framwork\Game-Framwork\bin\Debug\GameFramework.pdb
+M:\pc\Dokumenter\GitHub\game-framework\Game-Framwork\Game-Framwork\bin\Debug\OpenTK.dll
+M:\pc\Dokumenter\GitHub\game-framework\Game-Framwork\Game-Framwork\bin\Debug\OpenTK.xml
+M:\pc\Dokumenter\GitHub\game-framework\Game-Framwork\Game-Framwork\obj\Debug\GameFramework.exe
+M:\pc\Dokumenter\GitHub\game-framework\Game-Framwork\Game-Framwork\obj\Debug\GameFramework.pdb

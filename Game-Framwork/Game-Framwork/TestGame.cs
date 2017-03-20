@@ -17,21 +17,7 @@ namespace GameFramework
 
         protected override void Update()
         {
-            if (InputManager.GetKeyDown(OpenTK.Input.Key.A))
-            {
-                Console.WriteLine("The 'a' key has been pressed! ");
-            }
-
-            if (InputManager.GetKeyUp(OpenTK.Input.Key.A))
-            {
-                Console.WriteLine("The 'a' key has been released");
-            }
-
-            if (InputManager.GetKey(OpenTK.Input.Key.A))
-            {
-                Console.WriteLine("The 'a' key has been pressed");
-            }
-
+            base.Update();
         }
 
         protected override void Render()
