@@ -17,7 +17,16 @@ namespace GameFramework
 
         protected override void Update()
         {
-            base.Update();
+            
+            if (InputManager.GetMouseButtonDown(OpenTK.Input.MouseButton.Left))
+            {
+                Console.WriteLine("Right Mouse Button Has Been Pressed");
+            }
+
+            if (!InputManager.GetMouseButtonUp(OpenTK.Input.MouseButton.Left))
+            {
+                Console.WriteLine("Right Mouse Button has been released");
+            }
         }
 
         protected override void Render()
