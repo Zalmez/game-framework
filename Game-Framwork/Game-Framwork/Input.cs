@@ -5,7 +5,7 @@ using OpenTK;
 
 namespace GameFramework
 {
-    public class InputManager
+    public class Input
     {
         //Key input
         private static List<Key> currentKeys = new List<Key>();

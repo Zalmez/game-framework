@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace GameFramework
 {
@@ -18,15 +18,17 @@ namespace GameFramework
         protected override void Update()
         {
             
-            if (InputManager.GetMouseButtonDown(OpenTK.Input.MouseButton.Left))
+            if (Input.GetMouseButtonDown(OpenTK.Input.MouseButton.Middle) == true)
             {
-                Console.WriteLine("Right Mouse Button Has Been Pressed");
+                Console.WriteLine("Middle Mouse Button Has Been pressed");
             }
 
-            if (!InputManager.GetMouseButtonUp(OpenTK.Input.MouseButton.Left))
-            {
-                Console.WriteLine("Right Mouse Button has been released");
-            }
+            
+
+            //if (InputManager.GetMouseButtonUp(OpenTK.Input.MouseButton.Middle) == false)
+            //{
+            //    Console.WriteLine("Middle Mouse Button has been released");
+            //}
         }
 
         protected override void Render()

@@ -35,7 +35,7 @@ namespace GameFramework
 
         protected override void OnUpdateFrame(FrameEventArgs e)
         {
-            InputManager.Update();
+            Input.Update();
             Update();
         }
 
