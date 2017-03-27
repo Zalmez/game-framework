@@ -17,10 +17,10 @@ namespace GameFramework
 
         protected override void Update()
         {
-            
-            if (Input.GetMouseButtonDown(OpenTK.Input.MouseButton.Middle) == true)
+
+            if (InputV2.KeyPress(OpenTK.Input.Key.A))
             {
-                Console.WriteLine("Middle Mouse Button Has Been pressed");
+                Console.WriteLine("The A key has been pressed");
             }
 
             
